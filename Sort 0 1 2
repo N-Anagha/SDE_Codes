@@ -1,0 +1,28 @@
+void sort012(int *arr, int n)
+{
+   //   Write your code here
+	int l=0,m=0,h=n-1;
+	while(arr[l]==0)
+		l++;
+	m=l;
+	while(arr[h]==2)
+		h--;
+	while(m<=h)
+	{
+		if(arr[m]<arr[l])
+		{
+			int k=arr[m];
+			arr[m]=arr[l];
+			arr[l]=k;
+			l++;
+		}
+		else if(arr[m]>arr[h])
+		{
+			int k=arr[m];
+			arr[m]=arr[h];
+			arr[h]=k;
+			h--;
+		}
+		m++;
+	}
+}
